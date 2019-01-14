@@ -1,5 +1,7 @@
 # Search-Guard
+
 #Подготовка к установки ELK
+
 yum install tzdata
 sudo yum install apr
 sudo yum install telnet
@@ -21,9 +23,11 @@ vi /etc/elasticsearch/jvm.options
 
 
 #Скачать дистрибутив Search Guard необходимой(своей) версии для elastic и Kibana#
+
 https://docs.search-guard.com/latest/search-guard-versions
 
 #Устанавливаем плагины для Кибаны и эластика#
+
 /usr/share/kibana/bin/kibana-plugin install file:///tmp/search-guard-kibana-plugin-6.5.4-17.zip
 
 
