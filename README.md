@@ -1,6 +1,7 @@
 ***Search-Guard настройка***
-***
-h1 Подготовка к установки ELK
+=====================
+
+Подготовка к установки ELK
 =====================
 yum install tzdata
 
@@ -18,7 +19,7 @@ sudo yum install logstash
 
 
 
-h2 #elastic
+elastic
 =====================
 sudo chkconfig --add elasticsearch
 
