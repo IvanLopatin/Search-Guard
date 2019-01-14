@@ -1,8 +1,7 @@
-```Search-Guard```
-
-
-###Подготовка к установки ELK###
-
+***Search-Guard настройка***
+***
+h1 Подготовка к установки ELK
+=====================
 yum install tzdata
 
 sudo yum install apr
@@ -18,8 +17,9 @@ sudo yum install kibana
 sudo yum install logstash
 
 
-#elastic
 
+h2 #elastic
+=====================
 sudo chkconfig --add elasticsearch
 
 sudo -i service elasticsearch start
@@ -40,10 +40,12 @@ vi /etc/elasticsearch/jvm.options
 
 
 
+
 #Скачать дистрибутив Search Guard необходимой(своей) версии для elastic и Kibana#
 
 
 https://docs.search-guard.com/latest/search-guard-versions
+
 
 
 #Устанавливаем плагины для Кибаны и эластика#
@@ -51,6 +53,7 @@ https://docs.search-guard.com/latest/search-guard-versions
 /etc/init.d/kibana stop
 
 /usr/share/kibana/bin/kibana-plugin install file:///tmp/search-guard-kibana-plugin-6.5.4-17.zip
+
 
 
 
@@ -76,6 +79,7 @@ cp /opt/ELK/config/example.yml /opt/ELK/config/SecPower.yml
 #3.1 Изменяем сертификаты под свою фирму
 
 
+
 #4.Генерируем ключи утилитой 
 
 #(генерируем сразу все сертификаты)
@@ -85,6 +89,7 @@ tools/sgtlstool.sh -c config/SecPower.yml -ca -crt
 #5.Добавляем в elasticsearch.yml пути к нашим сертификатам, перед тем переносим их к директорию к elastic (/etc/elasticsearch)
 
 vi /etc/elasticsearch/elasticsearch.yml
+
 
 ##add
 
@@ -103,6 +108,7 @@ searchguard.ssl.transport.enforce_hostname_verification: false
 searchguard.authcz.admin_dn:
 
   - CN=admin,OU=client,O=client,L=test, C=de
+
 
 
 
