@@ -85,6 +85,28 @@ tools/sgtlstool.sh -c config/SecPower.yml -ca -crt
 
 vi /etc/elasticsearch/elasticsearch.yml
 
+##add
+
+action.auto_create_index: .monitoring*,.watches,.triggered_watches,.watcher-history*,.ml*
+
+searchguard.ssl.transport.pemcert_filepath: out/node1.pem
+
+searchguard.ssl.transport.pemkey_filepath: out/node1.key
+
+searchguard.ssl.transport.pemkey_password: default-scret
+
+searchguard.ssl.transport.pemtrustedcas_filepath: out/root-ca.pem
+
+searchguard.ssl.transport.enforce_hostname_verification: false
+
+searchguard.authcz.admin_dn:
+
+  - CN=admin,OU=client,O=client,L=test, C=de
+
+
+
+#5.1 Проверяем правильность заполнения и загрузку сертификатов
+
 /opt/ELK/tools/sgtlsdiag.sh -es /etc/elasticsearch/elasticsearch.yml
 
 
