@@ -3,23 +3,40 @@
 #Подготовка к установки ELK
 
 yum install tzdata
+
 sudo yum install apr
+
 sudo yum install telnet
+
 sudo yum install java
+
 sudo yum install elasticsearch
+
 sudo yum install kibana
+
 sudo yum install logstash
 
+
 #elastic
+
 sudo chkconfig --add elasticsearch
+
 sudo -i service elasticsearch start
+
 sudo -i service elasticsearch stop
+
 sudo /bin/systemctl daemon-reload
+
 sudo /bin/systemctl enable elasticsearch.service
+
 sudo systemctl start elasticsearch.service
+
 vi /etc/elasticsearch/jvm.options
+
 `-Xms4g`
+
 `-Xmx4g`
+
 
 
 #Скачать дистрибутив Search Guard необходимой(своей) версии для elastic и Kibana#
