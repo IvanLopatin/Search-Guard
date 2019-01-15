@@ -62,39 +62,39 @@ https://docs.search-guard.com/latest/search-guard-versions
 Минимально необходимая защита реализуется через TLS
 =====================
 
-*1.Скачиваем TLS утилиту*
+**1.Скачиваем TLS утилиту**
  
 https://docs.search-guard.com/latest/offline-tls-tool
 
 https://search.maven.org/search?q=a:search-guard-tlstool
 
-#2.Распаковываем
+**2.Распаковываем**
 
 gunzip /opt/ELK/search-guard-tlstool-1.6.tar.gz
 
 tar xvf /opt/ELK/search-guard-tlstool-1.6.tar
 
-#3.Создаем свой конфиг файл для генерации ключей SecPower.yml(см. в директории)
+**3.Создаем свой конфиг файл для генерации ключей SecPower.yml(см. в директории)**
 
 cp /opt/ELK/config/example.yml /opt/ELK/config/SecPower.yml
 
-#3.1 Изменяем сертификаты под свою фирму
+**3.1 Изменяем сертификаты под свою фирму**
 
 
 
 Генерируем ключи утилитой 
 =====================
 
-#(генерируем сразу все сертификаты)
+**(генерируем сразу все сертификаты)**
 
 tools/sgtlstool.sh -c config/SecPower.yml -ca -crt 
 
-#5.Добавляем в elasticsearch.yml пути к нашим сертификатам, перед тем переносим их к директорию к elastic (/etc/elasticsearch)
+**5.Добавляем в elasticsearch.yml пути к нашим сертификатам, перед тем переносим их к директорию к elastic (/etc/elasticsearch)**
 
 vi /etc/elasticsearch/elasticsearch.yml
 
 
-##add
+**#add**
 
 action.auto_create_index: .monitoring*,.watches,.triggered_watches,.watcher-history*,.ml*
 
