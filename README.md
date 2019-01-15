@@ -19,7 +19,7 @@ sudo yum install logstash
 
 
 
-##elastic
+elastic
 =====================
 sudo chkconfig --add elasticsearch
 
@@ -43,6 +43,7 @@ vi /etc/elasticsearch/jvm.options
 
 
 #Скачать дистрибутив Search Guard необходимой(своей) версии для elastic и Kibana#
+=====================
 
 
 https://docs.search-guard.com/latest/search-guard-versions
@@ -50,6 +51,8 @@ https://docs.search-guard.com/latest/search-guard-versions
 
 
 ##Устанавливаем плагины для Кибаны и эластика
+=====================
+
 /etc/init.d/elasticsearch stop
 /etc/init.d/kibana stop
 
@@ -60,8 +63,9 @@ https://docs.search-guard.com/latest/search-guard-versions
 
 
 ###Минимально необходимая защита реализуется через TLS
+=====================
 
-#1.Скачиваем TLS утилиту
+###1.Скачиваем TLS утилиту
  
 https://docs.search-guard.com/latest/offline-tls-tool
 
