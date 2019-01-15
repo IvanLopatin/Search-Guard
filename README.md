@@ -85,7 +85,8 @@ cp /opt/ELK/config/example.yml /opt/ELK/config/SecPower.yml
 
 
 
-#4.Генерируем ключи утилитой 
+Генерируем ключи утилитой 
+=====================
 
 #(генерируем сразу все сертификаты)
 
@@ -118,6 +119,7 @@ searchguard.authcz.admin_dn:
 
 
 #5.1 Проверяем правильность заполнения и загрузку сертификатов
+=====================
 
 /opt/ELK/tools/sgtlsdiag.sh -es /etc/elasticsearch/elasticsearch.yml
 
