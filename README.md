@@ -6,8 +6,11 @@ Information
 
 [Search Guard site](https://search-guard.com)
 
-Подготовка к установки ELK
+Подготовка к установке ELK
 =====================
+
+
+
 ```yum install tzdata```
 
 ```sudo yum install apr```
@@ -122,6 +125,7 @@ elastic
 :bulb: https://github.com/xtermi2/elasticsearch-searchguard :bulb:
 (Описание параметров searchguard.ssl)
 
+:heavy_exclamation_mark::heavy_exclamation_mark: Делаем резервные копии сертификатов из папки /out/:heavy_exclamation_mark::heavy_exclamation_mark:
 
 Проверяем правильность заполнения и загрузку сертификатов
 =====================
