@@ -26,19 +26,19 @@ Information
 
 elastic
 =====================
-sudo chkconfig --add elasticsearch
+```sudo chkconfig --add elasticsearch```
 
-sudo -i service elasticsearch start
+```sudo -i service elasticsearch start```
 
-sudo -i service elasticsearch stop
+```sudo -i service elasticsearch stop```
 
-sudo /bin/systemctl daemon-reload
+```sudo /bin/systemctl daemon-reload```
 
-sudo /bin/systemctl enable elasticsearch.service
+```sudo /bin/systemctl enable elasticsearch.service```
 
-sudo systemctl start elasticsearch.service
+```sudo systemctl start elasticsearch.service```
 
-vi /etc/elasticsearch/jvm.options
+```vi /etc/elasticsearch/jvm.options```
 
 > > ```-Xms4g```
 
@@ -58,10 +58,10 @@ vi /etc/elasticsearch/jvm.options
 Устанавливаем плагины для Кибаны и эластика
 =====================
 
-/etc/init.d/elasticsearch stop
-/etc/init.d/kibana stop
+```/etc/init.d/elasticsearch stop```
+```/etc/init.d/kibana stop```
 
-/usr/share/kibana/bin/kibana-plugin install file:///tmp/search-guard-kibana-plugin-6.5.4-17.zip
+```//usr/share/kibana/bin/kibana-plugin install file:///tmp/search-guard-kibana-plugin-6.5.4-17.zip```/
 
 
 Минимально необходимая защита реализуется через TLS
@@ -75,13 +75,13 @@ vi /etc/elasticsearch/jvm.options
 
 **2.Распаковываем**
 
-gunzip /opt/ELK/search-guard-tlstool-1.6.tar.gz
+```/gunzip /opt/ELK/search-guard-tlstool-1.6.tar.gz```
 
-tar xvf /opt/ELK/search-guard-tlstool-1.6.tar
+```tar xvf /opt/ELK/search-guard-tlstool-1.6.tar```
 
 **3.Создаем свой конфиг файл для генерации ключей SecPower.yml(см. в директории)**
 
-cp /opt/ELK/config/example.yml /opt/ELK/config/SecPower.yml
+```cp /opt/ELK/config/example.yml /opt/ELK/config/SecPower.yml```
 
 **3.1 Изменяем сертификаты под свою фирму**
 
@@ -92,11 +92,11 @@ cp /opt/ELK/config/example.yml /opt/ELK/config/SecPower.yml
 
 **(генерируем сразу все сертификаты)**
 
-tools/sgtlstool.sh -c config/SecPower.yml -ca -crt 
+```tools/sgtlstool.sh -c config/SecPower.yml -ca -crt```
 
 **5.Добавляем в elasticsearch.yml пути к нашим сертификатам, перед тем переносим их к директорию к elastic (/etc/elasticsearch)**
 
-vi /etc/elasticsearch/elasticsearch.yml
+```vi /etc/elasticsearch/elasticsearch.yml```
 
 
 **#add**
@@ -124,6 +124,6 @@ searchguard.authcz.admin_dn:
 Проверяем правильность заполнения и загрузку сертификатов
 =====================
 
-/opt/ELK/tools/sgtlsdiag.sh -es /etc/elasticsearch/elasticsearch.yml
+```/opt/ELK/tools/sgtlsdiag.sh -es /etc/elasticsearch/elasticsearch.yml```
 
 
