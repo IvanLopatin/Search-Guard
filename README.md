@@ -112,7 +112,7 @@ searchguard.authcz.admin_dn:
 
   - CN=admin,OU=client,O=client,L=test, C=de
 
-:bulb:https://github.com/xtermi2/elasticsearch-searchguard:bulb:
+:bulb: https://github.com/xtermi2/elasticsearch-searchguard :bulb:
 
 
 
