@@ -65,7 +65,9 @@ elastic
 
 ```/etc/init.d/kibana stop```
 
-```//usr/share/kibana/bin/kibana-plugin install file:///tmp/search-guard-kibana-plugin-6.5.4-17.zip```/
+```/bin/elasticsearch-plugin install file:///opt/ELK/search-guard-6-6.5.4-24.0.zip```/
+
+```/usr/share/kibana/bin/kibana-plugin install file:///tmp/search-guard-kibana-plugin-6.5.4-17.zip```
 
 
 Минимально необходимая защита реализуется через TLS
