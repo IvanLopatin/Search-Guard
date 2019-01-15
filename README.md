@@ -1,4 +1,4 @@
-:white_check_mark:***Search-Guard настройка***
+:key:***Search-Guard настройка под ELK***:lock:
 =====================
 
 Подготовка к установки ELK
@@ -35,18 +35,18 @@ sudo systemctl start elasticsearch.service
 
 vi /etc/elasticsearch/jvm.options
 
-`-Xms4g`
+> > ```-Xms4g```
 
-`-Xmx4g`
-
-
+> >```-Xmx4g```
 
 
-Скачать дистрибутив Search Guard необходимой(своей) версии для elastic и Kibana#
+
+
+:heavy_exclamation_mark:Скачать дистрибутив Search Guard необходимой(своей) версии для elastic и Kibana#:heavy_exclamation_mark:
 =====================
 
 
-https://docs.search-guard.com/latest/search-guard-versions
+:point_right:https://docs.search-guard.com/latest/search-guard-versions
 
 
 
@@ -64,9 +64,9 @@ https://docs.search-guard.com/latest/search-guard-versions
 
 **1.Скачиваем TLS утилиту**
  
-https://docs.search-guard.com/latest/offline-tls-tool
+:point_right:https://docs.search-guard.com/latest/offline-tls-tool
 
-https://search.maven.org/search?q=a:search-guard-tlstool
+:point_right:https://search.maven.org/search?q=a:search-guard-tlstool
 
 **2.Распаковываем**
 
