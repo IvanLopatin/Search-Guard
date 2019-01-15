@@ -19,7 +19,7 @@ sudo yum install logstash
 
 
 
-elastic
+:white_check_mark:elastic
 =====================
 sudo chkconfig --add elasticsearch
 
