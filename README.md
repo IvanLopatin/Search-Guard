@@ -1,7 +1,7 @@
-***Search-Guard настройка***
+:white_check_mark:***Search-Guard настройка***
 =====================
 
-Подготовка к установки ELK
+#Подготовка к установки ELK
 =====================
 yum install tzdata
 
@@ -19,7 +19,7 @@ sudo yum install logstash
 
 
 
-:white_check_mark:elastic
+##elastic
 =====================
 sudo chkconfig --add elasticsearch
 
@@ -49,7 +49,7 @@ https://docs.search-guard.com/latest/search-guard-versions
 
 
 
-#Устанавливаем плагины для Кибаны и эластика#
+##Устанавливаем плагины для Кибаны и эластика
 /etc/init.d/elasticsearch stop
 /etc/init.d/kibana stop
 
@@ -59,7 +59,7 @@ https://docs.search-guard.com/latest/search-guard-versions
 
 
 
-####Минимально необходимая защита реализуется через TLS
+###Минимально необходимая защита реализуется через TLS
 
 #1.Скачиваем TLS утилиту
  
