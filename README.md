@@ -3,7 +3,7 @@
 
 Подготовка к установки ELK
 =====================
-yum install tzdata
+```yum install tzdata```
 
 sudo yum install apr
 
