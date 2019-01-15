@@ -100,23 +100,23 @@ elastic
 
 
 **#add**
-```
-action.auto_create_index: .monitoring*,.watches,.triggered_watches,.watcher-history*,.ml*
+>
+> action.auto_create_index: .monitoring*,.watches,.triggered_watches,.watcher-history*,.ml*
 
-searchguard.ssl.transport.pemcert_filepath: ***out/node1.pem***
+> searchguard.ssl.transport.pemcert_filepath: ***out/node1.pem***
 
-searchguard.ssl.transport.pemkey_filepath: ***out/node1.key***
+> searchguard.ssl.transport.pemkey_filepath: ***out/node1.key***
 
-searchguard.ssl.transport.pemkey_password: ***default-scret***
+> searchguard.ssl.transport.pemkey_password: ***default-scret***
 
-searchguard.ssl.transport.pemtrustedcas_filepath: ***out/root-ca.pem***
+> searchguard.ssl.transport.pemtrustedcas_filepath: ***out/root-ca.pem***
 
-searchguard.ssl.transport.enforce_hostname_verification: ***false***
+> searchguard.ssl.transport.enforce_hostname_verification: ***false***
 
-searchguard.authcz.admin_dn:
+> searchguard.authcz.admin_dn:
 
-  - CN=admin,OU=client,O=client,L=test, C=de
-  ```
+>  - CN=admin,OU=client,O=client,L=test, C=de
+  >
 
 :bulb: https://github.com/xtermi2/elasticsearch-searchguard :bulb:
 (Описание параметров searchguard.ssl)
