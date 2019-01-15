@@ -59,6 +59,7 @@ elastic
 =====================
 
 ```/etc/init.d/elasticsearch stop```
+
 ```/etc/init.d/kibana stop```
 
 ```//usr/share/kibana/bin/kibana-plugin install file:///tmp/search-guard-kibana-plugin-6.5.4-17.zip```/
