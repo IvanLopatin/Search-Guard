@@ -100,7 +100,11 @@ elastic
 
 ```tools/sgtlstool.sh -c config/SecPower.yml -ca -crt```
 
-**5.Добавляем в elasticsearch.yml пути к нашим сертификатам, перед тем переносим их к директорию к elastic (/etc/elasticsearch)**
+**5.Добавляем в elasticsearch.yml пути к нашим сертификатам, перед тем, переносим их в директорию к elastic (/etc/elasticsearch) - создаем  там директорию out\**
+
+```mkdir /etc/elasticsearch/out```
+
+``cp /opt/ELK/out/* /etc/elasticsearch/out/```
 
 ```vi /etc/elasticsearch/elasticsearch.yml```
 
