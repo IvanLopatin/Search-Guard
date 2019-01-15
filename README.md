@@ -1,7 +1,7 @@
 :white_check_mark:***Search-Guard настройка***
 =====================
 
-#Подготовка к установки ELK
+Подготовка к установки ELK
 =====================
 yum install tzdata
 
@@ -42,7 +42,7 @@ vi /etc/elasticsearch/jvm.options
 
 
 
-#Скачать дистрибутив Search Guard необходимой(своей) версии для elastic и Kibana#
+Скачать дистрибутив Search Guard необходимой(своей) версии для elastic и Kibana#
 =====================
 
 
@@ -50,7 +50,7 @@ https://docs.search-guard.com/latest/search-guard-versions
 
 
 
-##Устанавливаем плагины для Кибаны и эластика
+Устанавливаем плагины для Кибаны и эластика
 =====================
 
 /etc/init.d/elasticsearch stop
@@ -59,13 +59,10 @@ https://docs.search-guard.com/latest/search-guard-versions
 /usr/share/kibana/bin/kibana-plugin install file:///tmp/search-guard-kibana-plugin-6.5.4-17.zip
 
 
-
-
-
-###Минимально необходимая защита реализуется через TLS
+Минимально необходимая защита реализуется через TLS
 =====================
 
-###1.Скачиваем TLS утилиту
+*1.Скачиваем TLS утилиту*
  
 https://docs.search-guard.com/latest/offline-tls-tool
 
@@ -118,7 +115,7 @@ searchguard.authcz.admin_dn:
 
 
 
-#5.1 Проверяем правильность заполнения и загрузку сертификатов
+Проверяем правильность заполнения и загрузку сертификатов
 =====================
 
 /opt/ELK/tools/sgtlsdiag.sh -es /etc/elasticsearch/elasticsearch.yml
