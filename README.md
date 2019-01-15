@@ -1,8 +1,10 @@
 :key:***Search Guard настройка под ELK***:lock:
-
-[Search Guard docs](https://docs.search-guard.com/latest/index)
-[Search Guard site](https://search-guard.com)
 =====================
+Information
+=====================
+[Search Guard docs](https://docs.search-guard.com/latest/index)
+
+[Search Guard site](https://search-guard.com)
 
 Подготовка к установки ELK
 =====================
