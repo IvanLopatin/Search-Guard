@@ -5,17 +5,17 @@
 =====================
 ```yum install tzdata```
 
-sudo yum install apr
+```sudo yum install apr```
 
-sudo yum install telnet
+```sudo yum install telnet```
 
-sudo yum install java
+```sudo yum install java```
 
-sudo yum install elasticsearch
+```sudo yum install elasticsearch```
 
-sudo yum install kibana
+```sudo yum install kibana```
 
-sudo yum install logstash
+```sudo yum install logstash```
 
 
 
